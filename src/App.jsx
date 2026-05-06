@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 const Header = (props) => {
   //console.log('props', props.title);
@@ -55,11 +54,20 @@ const App = () => {
       <Header jemok="WEB"
         iCallFunc={() => {
           alert('Header');
-        }}></Header>
+        }}>
+      </Header>
+
+      {Header({
+        jemok: `${topics[0].title}`, iCallFunc: () => {
+          console.log("RUN")
+        }
+      }
+      )}
 
       <Nav topics={topics} onChangeMode={(id) => {
         alert(id);
-      }}></Nav>
+      }}>
+      </Nav>
 
       <Article title="Welcome" body="Hello, Web"></Article>
     </div>
