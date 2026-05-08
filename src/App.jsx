@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Test, { test1, test2 as Test2 } from './Test';
 
 const Header = (props) => {
   //console.log('props', props.title);
@@ -159,6 +160,13 @@ const App = () => {
       </ul>
 
       {/*<Immutable />*/}
+
+      {/* 다른 파일의 변수 가져오기
+      <Test />
+      {test1}
+      <Test2 />
+      */}
+
     </div>
   );
 };
